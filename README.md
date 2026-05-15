@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="public/assets/Abel_Biju_George.jpg" width="140" style="border-radius: 50%;" alt="Abel Biju George" />
-</p>
 
 <h1 align="center">Abel Biju George — Portfolio</h1>
 
@@ -157,7 +154,9 @@ The API automatically discovers and serves all images from the corresponding dir
 
 ## 📄 License
 
-This project is for personal portfolio use. Feel free to use the architecture and patterns as inspiration for your own work.
+**All Rights Reserved © Abel Biju George**
+
+This repository and its contents — including all source code, design systems, assets, and images — are the intellectual property of Abel Biju George. No part of this project may be copied, modified, distributed, or used in any form without explicit written permission from the author.
 
 ---
 
