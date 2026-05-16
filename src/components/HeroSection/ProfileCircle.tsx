@@ -5,15 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
 const profileImages = [
-  //{ src: '/assets/Abel_Biju_George.jpg', color: 'rgba(59, 130, 246, 0.5)' }, // Blue-ish
-  { src: '/assets/Abel_Biju_George1.jpg', color: 'rgba(107, 114, 128, 0.5)' }, // Gray-ish
-  { src: '/assets/Profile2.jpg', color: 'rgba(234, 179, 8, 0.5)' }, // Warm/Yellow
-  { src: '/assets/IT Abel Biju George.png', color: 'rgba(16, 185, 129, 0.5)' }, // Green-ish
-  { src: '/assets/Abel_Biju_George2.jpg', color: 'rgba(236, 72, 153, 0.5)' }, // Pink-ish
-  //{ src: '/assets/Abel_Biju_George3.jpg', color: 'rgba(147, 51, 234, 0.5)' }, // Purple-ish
-  { src: '/assets/Abel_Biju_George4.jpeg', color: 'rgba(249, 115, 22, 0.5)' }, // Orange-ish
-  //{ src: '/assets/Abel_Biju_George5.jpg', color: 'rgba(107, 114, 128, 0.5)' }, // Gray-ish
-  //{ src: '/assets/Abel_Biju_George6.jpg', color: 'rgba(59, 130, 246, 0.5)' }, // Blue-ish
+  { src: '/assets/1.jpg', color: 'rgba(107, 114, 128, 0.5)' }, // Gray-ish
+  { src: '/assets/2.webp', color: 'rgba(234, 179, 8, 0.5)' }, // Warm/Yellow
+  { src: '/assets/3.png', color: 'rgba(16, 185, 129, 0.5)' }, // Green-ish
+  { src: '/assets/4.webp', color: 'rgba(249, 115, 22, 0.5)' }, // Orange-ish
 ];
 
 const ProfileCircle = () => {

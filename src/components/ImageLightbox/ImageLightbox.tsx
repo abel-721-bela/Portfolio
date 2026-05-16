@@ -4,6 +4,7 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import './ImageLightbox.css';
 
 interface ImageLightboxProps {
@@ -144,11 +145,24 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({ images, initialIndex, onC
               duration: 0.35,
               ease: [0.23, 1, 0.32, 1],
             }}
+            style={{ 
+              position: 'relative', 
+              width: '90vw', 
+              height: '80vh',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
           >
-            <img
+            <Image
               src={images[currentIndex]}
               alt={`Image ${currentIndex + 1} of ${totalImages}`}
+              fill
+              sizes="100vw"
+              quality={90}
+              priority={currentIndex === initialIndex}
               className="lightbox-image"
+              style={{ objectFit: 'contain' }}
               draggable={false}
             />
           </motion.div>

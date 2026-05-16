@@ -2,7 +2,10 @@
 
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, AtSign } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { FaDiscord } from 'react-icons/fa';
+import { FaBluesky } from 'react-icons/fa6';
+import { FlipWords } from '../UI/FlipWords';
 import './ClosingSection.css';
 
 const fadeUp = (delay: number = 0) => ({
@@ -55,7 +58,7 @@ const socialLinks = [
   {
     label: 'Bluesky',
     href: 'https://bsky.app/profile/abel-721-bela',
-    icon: AtSign,
+    icon: FaBluesky,
     display: 'bsky.app/abel-721-bela',
     external: true,
   },
@@ -164,21 +167,7 @@ const AmbientParticles: React.FC = () => {
 //  DISCORD ICON (custom inline SVG since lucide doesn't have it)
 // ═══════════════════════════════════════════════════
 
-const DiscordIcon: React.FC<{ size?: number }> = ({ size = 16 }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M8.12 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm7.76 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
-    <path d="M15.27 5.52A12.5 12.5 0 0 0 12 5a12.5 12.5 0 0 0-3.27.52 17.9 17.9 0 0 0-3.57 4.95A16.84 16.84 0 0 0 4 15.56s1.31 2.25 5.8 2.44a6.62 6.62 0 0 0 1.12-1.56 9.44 9.44 0 0 1-2.86-1.22l.34-.27a8.76 8.76 0 0 0 7.2 0l.34.27a9.44 9.44 0 0 1-2.86 1.22 6.62 6.62 0 0 0 1.12 1.56c4.49-.19 5.8-2.44 5.8-2.44a16.84 16.84 0 0 0-1.16-5.09 17.9 17.9 0 0 0-3.57-4.95Z" />
-  </svg>
-);
+// (DiscordIcon removed in favor of react-icons/fa)
 
 // ═══════════════════════════════════════════════════
 //  MAIN COMPONENT
@@ -207,9 +196,11 @@ const ClosingSection: React.FC = () => {
               viewport={{ once: true }}
               variants={fadeUp(0.1)}
             >
-              Still building.<br />
-              Still learning.<br />
-              Still becoming.
+              <span>Still</span>
+              <FlipWords 
+                words={["building.", "learning.", "becoming."]} 
+                className="text-primary" 
+              />
             </motion.h2>
 
             <motion.p
@@ -261,7 +252,7 @@ const ClosingSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="closing-link"
               >
-                <DiscordIcon size={15} />
+                <FaDiscord size={15} />
                 <span className="closing-link-text">discord/spirit07bruhh</span>
               </a>
             </div>

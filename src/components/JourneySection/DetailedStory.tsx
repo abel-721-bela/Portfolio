@@ -4,6 +4,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Quote, MapPin } from 'lucide-react';
+import Image from 'next/image';
 import { Milestone } from './journeyData';
 import LocationPreview from './LocationPreview';
 import ImageLightbox from '../ImageLightbox/ImageLightbox';
@@ -208,12 +209,24 @@ const DetailedStory: React.FC<DetailedStoryProps> = ({ milestone, onClose }) => 
               <div className="ds-bento">
                 {galleryImages.length > 0 ? (
                   <>
-                    <div className="ds-cell hero" onClick={() => openLightbox(0)} style={{ cursor: 'pointer' }}>
-                      <img src={galleryImages[0]} alt="" />
+                    <div className="ds-cell hero" onClick={() => openLightbox(0)} style={{ cursor: 'pointer', position: 'relative' }}>
+                      <Image 
+                        src={galleryImages[0]} 
+                        alt="" 
+                        fill
+                        sizes="(max-width: 768px) 100vw, 800px"
+                        style={{ objectFit: 'cover' }}
+                      />
                     </div>
                     {galleryImages[1] && (
-                      <div className="ds-cell" onClick={() => openLightbox(1)} style={{ cursor: 'pointer' }}>
-                        <img src={galleryImages[1]} alt="" />
+                      <div className="ds-cell" onClick={() => openLightbox(1)} style={{ cursor: 'pointer', position: 'relative' }}>
+                        <Image 
+                          src={galleryImages[1]} 
+                          alt="" 
+                          fill
+                          sizes="(max-width: 768px) 50vw, 400px"
+                          style={{ objectFit: 'cover' }}
+                        />
                       </div>
                     )}
                     {galleryImages.length === 1 && (
@@ -227,7 +240,17 @@ const DetailedStory: React.FC<DetailedStoryProps> = ({ milestone, onClose }) => 
                     {galleryImages.length > 2 && (
                        <div className="ds-cell small-grid">
                           {galleryImages.slice(2, 6).map((img, idx) => (
-                            <img key={idx} src={img} alt="" className="mini-img" onClick={() => openLightbox(idx + 2)} style={{ cursor: 'pointer' }} />
+                        <div key={idx} className="mini-img-wrapper" style={{ position: 'relative', height: '100px' }}>
+                          <Image 
+                            src={img} 
+                            alt="" 
+                            fill
+                            sizes="150px"
+                            className="mini-img" 
+                            onClick={() => openLightbox(idx + 2)} 
+                            style={{ cursor: 'pointer', objectFit: 'cover' }} 
+                          />
+                        </div>
                           ))}
                        </div>
                     )}

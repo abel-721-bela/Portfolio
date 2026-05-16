@@ -86,7 +86,13 @@
   line-height: 1.25;
   letter-spacing: -0.025em;
   margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem;
 }
+
+/* (Specific children styles removed in favor of flex gap) */
 
 .closing-vision {
   font-size: 0.95rem;

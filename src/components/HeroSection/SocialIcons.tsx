@@ -2,7 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Cloud, Disc } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { FaDiscord } from 'react-icons/fa';
+import { FaBluesky } from 'react-icons/fa6';
 
 const LinkedinIcon = ({ size = 24, strokeWidth = 2, ...props }: any) => (
   <svg
@@ -46,8 +48,8 @@ const socials = [
   { icon: Mail, href: 'mailto:abelbijugeorge@gmail.com', label: 'Mail' },
   { icon: LinkedinIcon, href: 'https://www.linkedin.com/in/abelbijugeorge', label: 'LinkedIn' },
   { icon: InstagramIcon, href: 'https://www.instagram.com/abel_721_bela/', label: 'Instagram' },
-  { icon: Cloud, href: 'https://bsky.app/profile/abel-721-bela', label: 'Bluesky' },
-  { icon: Disc, href: 'https://discord.com/invite/spirit07bruhh', label: 'Discord' },
+  { icon: FaBluesky, href: 'https://bsky.app/profile/abel-721-bela', label: 'Bluesky' },
+  { icon: FaDiscord, href: 'https://discord.com/invite/spirit07bruhh', label: 'Discord' },
 ];
 
 const SocialIcons = () => {

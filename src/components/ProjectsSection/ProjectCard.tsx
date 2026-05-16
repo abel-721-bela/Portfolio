@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Project } from './projectsData';
 
 interface ProjectCardProps {
@@ -24,13 +25,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails }) => 
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="cardImageWrapper">
-        <img 
+        <Image 
           src={`/assets/projects/${project.assetFolder}/title.jpg`} 
           alt={project.title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="cardImage"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop';
-          }}
+          style={{ objectFit: 'cover' }}
         />
         <div className="cardOverlay" />
       </div>
