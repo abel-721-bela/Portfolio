@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { X, Download, ExternalLink } from 'lucide-react';
 import './ResumeViewer.css';
 
-const RESUME_PATH = '/assets/Abel Biju George.pdf';
+const RESUME_PATH = '/assets/Abel_Biju_George_Resume.pdf';
 
 interface ResumeViewerProps {
   onClose: () => void;

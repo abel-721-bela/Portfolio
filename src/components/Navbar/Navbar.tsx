@@ -155,18 +155,7 @@ const Navbar: React.FC = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="navbar-mobile-actions">
-                <button
-                  className="navbar-resume-btn"
-                  onClick={() => {
-                    setShowResume(true);
-                    setMobileMenuOpen(false);
-                  }}
-                >
-                  <FileText size={14} />
-                  <span>Resume</span>
-                </button>
-              </div>
+
             </motion.div>
           )}
         </AnimatePresence>

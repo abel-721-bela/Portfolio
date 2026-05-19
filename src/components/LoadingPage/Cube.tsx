@@ -107,7 +107,7 @@ const Cube: React.FC<CubeProps> = ({ onSequenceComplete, isThemeDark }) => {
   });
 
   const textProps = {
-    font: 'https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXPTs.ttf',
+    font: 'https://fonts.gstatic.com/s/fredoka/v17/X7nP4b87HvSqjb_WIi2yDCRwoQ_k7367_B-i2yQag0-mac3OLyXMFg.ttf',
     fontSize: 0.12,
     color: isThemeDark ? '#f5f5f7' : '#1d1d1f',
     anchorX: 'center' as const,
