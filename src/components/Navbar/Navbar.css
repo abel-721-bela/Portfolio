@@ -102,25 +102,49 @@
   flex-shrink: 0;
 }
 
+@keyframes liquid-metal {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .navbar-resume-btn {
   font-family: 'Inter', sans-serif;
   font-size: 0.65rem;
-  font-weight: 600;
-  color: var(--btn-ghost-text);
-  letter-spacing: 0.03em;
-  padding: 0.4rem 1rem;
+  font-weight: 700;
+  color: #050505;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 1.1rem;
   border-radius: 100px;
-  border: 1px solid var(--btn-ghost-border);
-  background: var(--btn-ghost-bg);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(
+    110deg,
+    #d1d5db 0%,
+    #ffffff 25%,
+    #9ca3af 50%,
+    #ffffff 75%,
+    #d1d5db 100%
+  );
+  background-size: 200% auto;
+  animation: liquid-metal 4s linear infinite;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6),
+    0 4px 14px rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-transform: uppercase;
 }
 
 .navbar-resume-btn:hover {
-  color: var(--navbar-text-active);
-  background: var(--surface-glass-hover);
-  border-color: var(--border-hover);
+  transform: translateY(-1.5px);
+  animation-duration: 2s;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8),
+    0 6px 20px rgba(255, 255, 255, 0.25);
 }
 
 .navbar-theme-toggle {
@@ -209,7 +233,7 @@
     display: none;
   }
 
-  .navbar-resume-btn {
+  .navbar-actions .navbar-resume-btn {
     display: none;
   }
 

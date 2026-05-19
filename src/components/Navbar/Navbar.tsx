@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileText } from 'lucide-react';
 import ThemeToggle from '../UI/ThemeToggle';
 import ResumeViewer from '../ResumeViewer/ResumeViewer';
 import './Navbar.css';
@@ -120,7 +120,8 @@ const Navbar: React.FC = () => {
               className="navbar-resume-btn"
               onClick={() => setShowResume(true)}
             >
-              Resume
+              <FileText size={14} />
+              <span>Resume</span>
             </button>
             <div className="navbar-theme-toggle">
               <ThemeToggle />
@@ -162,7 +163,8 @@ const Navbar: React.FC = () => {
                     setMobileMenuOpen(false);
                   }}
                 >
-                  Resume
+                  <FileText size={14} />
+                  <span>Resume</span>
                 </button>
               </div>
             </motion.div>
