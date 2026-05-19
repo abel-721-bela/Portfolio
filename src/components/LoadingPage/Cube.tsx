@@ -34,7 +34,7 @@ const Cube: React.FC<CubeProps> = ({ onSequenceComplete, isThemeDark }) => {
         setTimeout(onSequenceComplete, 1000);
         return prev;
       });
-    }, 2000);
+    }, 1500);
 
     return () => clearInterval(timer);
   }, [onSequenceComplete]);
@@ -107,7 +107,7 @@ const Cube: React.FC<CubeProps> = ({ onSequenceComplete, isThemeDark }) => {
   });
 
   const textProps = {
-    font: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZhrib2Bg-4.ttf',
+    font: 'https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXPTs.ttf',
     fontSize: 0.12,
     color: isThemeDark ? '#f5f5f7' : '#1d1d1f',
     anchorX: 'center' as const,
