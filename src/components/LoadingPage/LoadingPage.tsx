@@ -71,14 +71,7 @@ const LoadingPage = ({ onComplete }: { onComplete: () => void }) => {
             </Canvas>
           </motion.div>
           
-          <motion.div 
-            className="loading-text"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 0.5, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            <span>EST. 2026</span>
-          </motion.div>
+
         </motion.div>
       )}
     </AnimatePresence>
