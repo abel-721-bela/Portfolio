@@ -40,6 +40,17 @@ export const metadata: Metadata = {
 
 import Cursor from "@/components/Cursor/Cursor";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Abel Biju George",
+  url: "https://abelbijugeorge.me",
+  jobTitle: "Software Engineer",
+  sameAs: [
+    "https://github.com/abel-721-bela"
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,6 +59,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Cursor />
         {children}
       </body>
